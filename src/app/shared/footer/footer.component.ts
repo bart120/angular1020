@@ -5,7 +5,16 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './footer.component.html'
 })
 export class FooterComponent implements OnInit {
+
+    marks = null;
+
     constructor() { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.marks = [
+            { name: 'Renault' },
+            { name: 'Audi' },
+            { name: 'BMW' }
+        ];
+    }
 }
