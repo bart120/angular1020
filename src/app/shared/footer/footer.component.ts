@@ -12,9 +12,9 @@ export class FooterComponent implements OnInit {
 
     ngOnInit(): void {
         this.marks = [
-            { name: 'Renault' },
-            { name: 'Audi' },
-            { name: 'BMW' }
+            { name: 'Renault', image: 'renault.jpg' },
+            { name: 'Audi', image: 'audi.jpg' },
+            { name: 'BMW', image: 'bmw.jpg' }
         ];
     }
 }

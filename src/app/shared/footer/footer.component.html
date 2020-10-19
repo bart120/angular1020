@@ -1,12 +1,18 @@
 <footer>
     <mat-icon>copyright</mat-icon>
     App en formation Angular
-    <div>
+    <div *ngIf="marks">
         <h3>TOP {{marks?.length}}</h3>
         <mat-grid-list cols="{{marks?.length}}">
             <mat-grid-tile *ngFor="let mark of marks">
-                <mat-card>{{mark?.name}}</mat-card>
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>{{mark?.name}}</mat-card-title>
+                    </mat-card-header>
+                    <img matCardImage src="assets/images/{{mark?.image}}" />
+                </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
+        <a mat-button>Voir plus...</a>
     </div>
 </footer>
