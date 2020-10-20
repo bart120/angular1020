@@ -1,25 +1,25 @@
 <mat-toolbar color="primary">
   <div>
     <span>{{title}}</span>
-    <a mat-button>
+    <a routerLink="/home" mat-button>
       <mat-icon>home</mat-icon>
       Accueil
     </a>
-    <a mat-button>
+    <a [routerLink]="['/car/list']" mat-button>
       <mat-icon>directions_car</mat-icon>
       Voitures
     </a>
-    <a mat-button>
+    <a routerLink="/car/add" mat-button>
       <mat-icon>add</mat-icon>
       Ajouter
     </a>
-    <a mat-button>
+    <a routerLink="/auth/login" mat-button>
       <mat-icon>locked_in</mat-icon>
       Connexion
     </a>
   </div>
 </mat-toolbar>
 
-CONTENU
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
