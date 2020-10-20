@@ -19,10 +19,6 @@ export class FooterComponent implements OnInit {
     }
 
     addData(): void {
-        this.marks = [
-            { name: 'Renault', image: 'renault.jpg' },
-            { name: 'Audi', image: 'audi.jpg' },
-            { name: 'BMW', image: 'bmw.jpg' }
-        ];
+        //this.marks = 
     }
 }
