@@ -6,3 +6,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 footer{
     background-color: azure;
 }
+
+.container{
+    margin-right: 15px;
+    margin-left: 15px;
+    box-sizing: border-box;
+}
+
+.myForm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+}
+
+.myForm > *{
+    width: 50%;
+}

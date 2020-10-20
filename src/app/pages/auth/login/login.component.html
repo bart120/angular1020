@@ -1,1 +1,14 @@
-<p>login works!</p>
+<h1>Connexion</h1>
+
+<form class="myForm" novalidate>
+    <mat-form-field>
+        <input matInput type="email" placeholder="Login" #mail (keyup.enter)="password.focus()" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Mot de passe" #password (keyup.enter)="onLogin(mail.value)" />
+    </mat-form-field>
+
+    <div>
+        <button type="button" mat-button (click)="onLogin(mail.value)">Se connecter</button>
+    </div>
+</form>
