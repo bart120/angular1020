@@ -1,9 +1,12 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+const urlApi = 'https://dev.inow.fr/formation/api/v1';
 
 export const environment = {
-  production: false
+  production: false,
+  urlMarks: urlApi + '/marks',
+  urlCars: `${urlApi}/cars`,
 };
 
 /*

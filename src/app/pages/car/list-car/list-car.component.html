@@ -1,1 +1,19 @@
-<p>list-car works!</p>
+<h2>Voitures</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Marque</th>
+        <th>Modèle</th>
+        <th>Prix</th>
+        <th>Date</th>
+        <th></th>
+    </tr>
+
+    <tr *ngFor="let car of cars">
+        <td>{{car.mark}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.price | currency:'€'}}</td>
+        <td>{{car.dateOfCirculation | date:'dd MMM yyyy'}}</td>
+        <td></td>
+    </tr>
+</table>
