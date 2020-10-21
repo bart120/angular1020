@@ -14,4 +14,8 @@ export class CarService {
   getCars(): Observable<Array<CarModel>> {
     return this._http.get<Array<CarModel>>(environment.urlCars);
   }
+
+  getCarById(id: number): Observable<CarModel> {
+    return this._http.get<CarModel>(`${environment.urlCars}/${id}`);
+  }
 }

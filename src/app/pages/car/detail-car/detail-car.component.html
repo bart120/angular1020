@@ -1,0 +1,10 @@
+<mat-card *ngIf="obsCar$ | async as car">
+    <mat-card-header>
+        <mat-card-title>{{car.model}}</mat-card-title>
+        <mat-card-subtitle>{{(car.mark | async)?.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Mise en service le {{car.dateOfCirculation | date:'dd MMM yyyy'}}</p>
+        <p>Tarif: {{car.price | currency:'€'}}</p>
+    </mat-card-content>
+</mat-card>
