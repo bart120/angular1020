@@ -25,4 +25,8 @@ export class MarkService {
             { name: 'BMW', image: 'bmw.jpg' }
         ];*/
     }
+
+    getMarkById(id: number): Observable<MarkModel> {
+        return this._http.get<MarkModel>(`${environment.urlMarks}/${id}`);
+    }
 }
