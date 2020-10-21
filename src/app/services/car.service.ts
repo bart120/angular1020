@@ -18,4 +18,8 @@ export class CarService {
   getCarById(id: number): Observable<CarModel> {
     return this._http.get<CarModel>(`${environment.urlCars}/${id}`);
   }
+
+  saveCar(car: CarModel): Observable<CarModel> {
+    return this._http.post<CarModel>(environment.urlCars, car);
+  }
 }
