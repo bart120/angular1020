@@ -1,6 +1,6 @@
 <h1>Connexion</h1>
 
-<form class="myForm" novalidate>
+<form class="myForm" novalidate *ngIf="user == null; else log">
     <mat-form-field>
         <input matInput type="email" placeholder="Login" #mail (keyup.enter)="password.focus()" />
     </mat-form-field>
@@ -12,3 +12,11 @@
         <button type="button" mat-button (click)="onLogin(mail.value)">Se connecter</button>
     </div>
 </form>
+
+<ng-template #log>
+    <div>
+        Bonjour, vous êtes connecté en tant que: {{user?.login}}
+        <br />
+        <button mat-button color="warn" (click)="onLogout()">Se déconnecter</button>
+    </div>
+</ng-template>
